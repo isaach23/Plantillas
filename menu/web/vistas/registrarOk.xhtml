@@ -8,34 +8,27 @@
     <body>
 
         <ui:composition template="./../plantillas/plantillaAlmacen.xhtml">
-
+  
             <ui:define name="content">
-                <h:form>
-                    <p:panelGrid columns="2">
-                        <h:outputText value="Nombre"/>
-                        <h:outputText value="#{form2.nombre}"/>
-                        <h:outputText value="identificacion"/>
-                        <h:outputText value="#{form2.documento}"/>
-                        <h:outputText value="id ciudad:"/>
-                        <h:outputText value="#{form2.ciudad}"/>
-                        <h:outputText value="Programa"/>
-                        <h:outputText value="#{form2.programa}"/>
-                        <h:outputText value="Semestre"/>
-                        <h:outputText value="#{form2.semestre}"/>
+                <h:form id="f">
+                    <div id="panel">
+                        <p:panel header="Personal Details" class="1">
+                            <p:messages />
+                            <h:panelGrid columns="2" columnClasses="label, value">
+                                <h:outputText value="Firstname: *" />
 
-                    </p:panelGrid>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
+                                <h:outputText value="Lastname: *" />
+
+
+                                <h:outputText value="Age: " />
+
+
+
+                            </h:panelGrid>
+                        </p:panel>
+                         <p:commandButton value="Guardar" icon="ui-icon-disk" />
+                    </div>
                 </h:form>
             </ui:define>
 

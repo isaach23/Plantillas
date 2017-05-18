@@ -16,8 +16,9 @@
                    <p:growl id="msg"/>
                     <h:outputText value="BUSCAR" /> <br/>
                     <p:autoComplete value="#{regis.registroD}" completeMethod="#{regis.complete}"/>
-                    <h3>FORMATO DE DEUDAS</h3>
-                   
+                    
+                    <div id="panel1">
+                        <p:panel header="FORMATO DE DEUDAS" class="1"  >
                     <p:panelGrid columns="6">
 
                         <h:outputText value="Yo"/>
@@ -37,7 +38,7 @@
 
                     </p:panelGrid>
                     <p><legend>Me comprometo a responder o pagar los siguientes materiales y/o equipos, en un lapso no mayor a seis (6) meses.</legend></p>
-                    <p:panelGrid columns="2">
+                    
                     <p:dataTable value="#{regis.listaI}" var="p"  editable="true" >
                     
                         <p:ajax event="rowEdit" listener="#{regis.actualizar}" update=":form2:msg"/>
@@ -74,18 +75,24 @@
                         
                         
                        </p:dataTable> 
-                             </p:panelGrid>
-                   
-                          <br/>
+                           
+                    </p:panel>
+                        
+                       
                       <br/>   
                       <p:inputTextarea  value="ACEPTO" rows="10" cols="50"  queryDelay="750" minQueryLength="4" style="left: right" />
                       <p:inputTextarea  value="FIRMA AUXILIAR" rows="10" cols="50"  queryDelay="750" minQueryLength="4" style=" float: right" /> 
                       
                       <br/>
                       <br/>
+                      
                       <p:commandButton value="Registrar" action="#{regis.registrar()}" icon="ui-icon-disk" style="   "/>
                       <br/>
                       <br/>
+                      
+                    </div>
+                   
+                      
                       </h:form>
                 
             </ui:define>
